@@ -63,7 +63,7 @@ pipeline{
         }
         stage("TRIVY"){
             steps{
-                sh "trivy image tkibnyusuf/uber:latest > trivyimage.json"
+                sh "trivy image ashow4all/uber:latest > trivyimage.json"
             }
         }        
         stage('Deploy to kubernetes'){
