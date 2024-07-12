@@ -2,14 +2,14 @@ pipeline {
     agent any
     environment {
         AWS_ACCOUNT_ID = credentials('account_id')
-        AWS_DEFAULT_REGION = "us-east-1"
+        AWS_DEFAULT_REGION = "us-west-2"
         AWS_ACCESS_KEY_ID = credentials('aws_access_key_id')
         AWS_SECRET_ACCESS_KEY = credentials('aws_secret_access_key')
     }
     stages {
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/tkibnyusuf/uber-clone.git'
+                git branch: 'main', url: 'https://github.com/akshow37/Ak_uber_App.git'
             }
         }
         stage('Terraform version') {
